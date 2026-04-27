@@ -1,0 +1,19 @@
+# --- デモ用 clone（各自の .git を持つ独立リポなので除外） ---
+**/handson/
+
+# --- PowerPoint / Office ロックファイル ---
+~$*
+*~$*
+
+# --- OS / エディタ ---
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# --- ビルド・キャッシュ系 ---
+node_modules/
+__pycache__/
+*.pyc
+.venv/
