@@ -6,22 +6,13 @@
 
 ```
 01-git-github/
-├── slides/
-│   └── lecture01.pptx          ← Claude Design からエクスポート（39 枚版）
-├── handson/
-│   ├── Asan/                   ← デモ用 clone（pbl-git-warmup）
-│   └── Bsan/                   ← デモ用 clone（pbl-git-warmup）
+├── handson/                    ← ハンズオン用の作業ディレクトリ（ローカル限定、.gitignore 済み）
+│   ├── Asan/
+│   └── Bsan/
 ├── plan.md                     ← Claude Plan モードで書いた当初の追加プラン
 ├── source-structure.md         ← スライド構成（旧 39 枚 → 新 36 枚への組み直し設計）
 └── README.md                   ← このファイル
 ```
-
-## 関連リソース
-
-- **練習用リポジトリ**: <https://github.com/ko-dhinngumuzuiyoo/pbl-git-warmup>
-- **本番リポジトリ**: <https://github.com/ko-dhinngumuzuiyoo/PBL>
-- **Claude Design Slide deck**: <https://claude.ai/design/p/38d0372e-0b81-4ded-82a7-cb485865a1e3>
-- **Claude Design Design system**: <https://claude.ai/design/p/c707154d-a467-41a9-bff2-b26cfaacfc73>
 
 ## 講義の方針
 
@@ -44,13 +35,6 @@
 3. `Bsan` で pull → コンフリクト発生（マーカー出現）
 4. 両方の変更を残す形で解決 → commit → push
 5. `git log --oneline --graph` で Y 字のマージグラフを見せる
-
-## TODO（次回までに）
-
-- [ ] PPTx の構成組み直し（旧 39 枚 → 新 36 枚、`source-structure.md` 参照）
-- [ ] 受講者 5 名を `pbl-git-warmup` の Collaborator に招待
-- [ ] コンフリクト実演のリハーサル（事前に 1 回通しておく）
-- [ ] Claude Code セットアップを案内（次回までの宿題）
 
 ## シリーズ計画（暫定）
 
