@@ -25,14 +25,14 @@
 ### 方法 1: GitHub Pages（公開後）
 
 ```
-https://ko-dhinngumuzuiyoo.github.io/lectures/00-about/lecture.html
-https://ko-dhinngumuzuiyoo.github.io/lectures/01-claude-code-intro/lecture.html
+https://watanabe-kohei-jp.github.io/lectures/00-about/lecture.html
+https://watanabe-kohei-jp.github.io/lectures/01-claude-code-intro/lecture.html
 ```
 
 ### 方法 2: クローンしてローカルで開く
 
 ```bash
-git clone https://github.com/ko-dhinngumuzuiyoo/lectures
+git clone https://github.com/watanabe-kohei-jp/lectures
 cd lectures
 # ブラウザで 00-about/lecture.html を開く
 ```
@@ -87,7 +87,21 @@ cd lectures
 | 改変 | ◎ |
 | 再配布 | ◎ |
 | 派生物に同条件を強制 | 不要 |
-| クレジット表記 | **必須**（"渡邊康平 / 高知工科大学" およびオリジナルへのリンク）|
+| クレジット表記 | **必須**（下記の attribution 例を参照）|
+
+### 引用・再利用時の attribution 例
+
+スライドの一部を別の資料で使う、講義に組み込む、改変して公開する — どの場合も以下の形でクレジットを残してください。
+
+```
+"Lectures" by 渡邊康平 / 高知工科大学, licensed under CC BY 4.0.
+Source: https://github.com/watanabe-kohei-jp/lectures
+（必要に応じて）Modified from the original / 改変あり
+```
+
+3 要素を含めれば書式は問いません：**① 作者名** / **② CC BY 4.0 へのリンク or 明示** / **③ オリジナルへのリンク**。改変している場合は「改変あり」も追加。
+
+サードパーティ素材の出典は [`CREDITS.md`](./CREDITS.md) を参照してください。
 
 ---
 
@@ -100,4 +114,7 @@ cd lectures
 ## 関連
 
 - [`CLAUDE.md`](./CLAUDE.md) — このリポジトリの運用方針（AI 向け / 人間向け両方）
+- [`CONTRIBUTING.md`](./CONTRIBUTING.md) — 貢献ガイド（Issue / Discussion / PR の使い分け）
+- [`CREDITS.md`](./CREDITS.md) — サードパーティ素材の出典
+- [`SECURITY.md`](./SECURITY.md) — セキュリティ報告経路
 - [`shared/`](./shared/) — HTML スライドエンジン（`deck-stage.js`）とデザインシステム（`theme.css`）
