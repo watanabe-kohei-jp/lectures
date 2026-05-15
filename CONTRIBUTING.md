@@ -75,6 +75,26 @@
 5. CI が green になることを確認
 6. レビュー → merge
 
+### PR を出したら、自分の名前を入れていい
+
+資料を修正・改善したら、その章に自分の名前を入れて構いません。**Role の有無は問いません。typo 修正でも OK です。**
+
+修正した章について、以下の 2 か所に行を追加してください：
+
+1. **章末の Credits スライド**（`lecture.html` の最後の `<section>`）
+
+   ```html
+   <li><strong>@your-handle</strong> — PR #&lt;番号&gt;: &lt;一行で説明&gt;</li>
+   ```
+
+2. **章の `README.md` 末尾の Authors セクション**
+
+   ```markdown
+   | Contributor | [@your-handle](https://github.com/your-handle) | PR #<番号>: <一行で説明> |
+   ```
+
+commit に `Co-Authored-By: Name <email>` trailer を付けると、GitHub の Contributors graph にも自動で反映されます。
+
 ### CI
 
 - **Prompt Injection Guard** が HTML/CSS/JS の追加行を自動スキャン
@@ -83,6 +103,32 @@
 ### 大きな変更の場合
 
 スライド構成の変更、新規 Lecture の追加など影響範囲が広い変更は、先に Issue を立てて議論してから PR を作るとスムーズです。
+
+## 貢献者の Role
+
+貢献してくれた人の名前は永続的に残ります。継続的に貢献する人には Role がつき、[`CONTRIBUTORS.md`](./CONTRIBUTORS.md) に掲載されます。
+
+> **このガバナンスは暫定的です。** コミュニティの成長に応じて見直します。NumPy 等の前例に倣い、現時点では昇格の PR 数閾値などの具体的な数字は置きません。
+
+| Role | どうやってなるか | できること |
+|---|---|---|
+| **Contributor** | merged PR が 1 つ以上ある | `CONTRIBUTORS.md` に掲載 / Role 推薦に参加できる |
+| **Core Contributor** | 継続的に貢献し、メンテナが認定 | 上記 + PR レビュー / Issue・PR の整理 |
+| **Maintainer** | 招待制（信頼関係ベース） | 上記 + merge 権限 / リポジトリ設定 / Role 認定の判断 |
+| **Emeritus** | 過去 12 か月 merged PR がない Role 保持者 | `CONTRIBUTORS.md` の Emeritus 欄に活動期間付きで掲載。復帰はいつでも可 |
+
+- **active 判定**: 直近 12 か月に merged PR があれば active。過ぎると Emeritus に移ります（名前は消えません）。
+- 復帰したいときは、また PR を出すか、下記の推薦を使ってください。
+
+### Role の推薦
+
+Role の付与はメンテナが判断しますが、**推薦は誰でもできます**（自薦も可）。
+
+1. [`CONTRIBUTORS.md`](./CONTRIBUTORS.md) に対象者の行を追加する PR を出す
+2. PR のコメント欄で議論する
+3. メンテナが **merge すれば承認**、close すれば見送り
+
+> この推薦フローは軽量さ優先の暫定形です。参加者が増えたら Issue ベースに変えるかもしれません。
 
 ## ライセンス
 
