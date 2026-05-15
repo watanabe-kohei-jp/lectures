@@ -81,13 +81,15 @@
 
 修正した章について、以下の 2 か所に行を追加してください：
 
-1. **章末の Credits スライド**（`lecture.html` の最後の `<section>`）
+1. **章末の Credits スライド** — `lecture.html` 最後の `<section>` にある `<ul class="credits-list">` に 1 行追加（名前だけ。多段組みで自動的に並びます）
 
    ```html
-   <li><strong>@your-handle</strong> — PR #&lt;番号&gt;: &lt;一行で説明&gt;</li>
+   <li><a href="https://github.com/your-handle">@your-handle</a></li>
    ```
 
-2. **章の `README.md` 末尾の Authors セクション**
+   最初の貢献者は「最初の貢献者を待っています」の行（`credits-empty`）を、自分の行に置き換えてください。
+
+2. **章の `README.md` 末尾の Authors セクション** — PR 番号と一行説明はこちらに書きます
 
    ```markdown
    | Contributor | [@your-handle](https://github.com/your-handle) | PR #<番号>: <一行で説明> |

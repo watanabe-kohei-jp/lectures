@@ -50,7 +50,7 @@
   <!-- ============================================================
        Slide 2 — 課題：今までのやり方では追いつけない
        ============================================================ -->
-  <section data-label="課題 — 今までのやり方では追いつけない">
+  <section data-kind="main" data-label="課題 — 今までのやり方では追いつけない">
     <div class="meta-line">
       <span><span class="accent">Chapter 1</span> · 課題</span>
       <span>02 / 09</span>
@@ -96,7 +96,7 @@
   <!-- ============================================================
        Slide 3 — 具体例：内容も、学び方も、1 年で別物
        ============================================================ -->
-  <section data-label="具体例 — 内容も学び方も 1 年で別物">
+  <section data-kind="main" data-label="具体例 — 内容も学び方も 1 年で別物">
     <div class="meta-line">
       <span><span class="accent">Chapter 1</span> · 続 · 具体例</span>
       <span>03 / 09</span>
@@ -170,7 +170,7 @@
   <!-- ============================================================
        Slide 4 — 解決策 01：PPTx ではなく HTML
        ============================================================ -->
-  <section data-label="解決策 01 — PPTx ではなく HTML">
+  <section data-kind="main" data-label="解決策 01 — PPTx ではなく HTML">
     <div class="meta-line">
       <span><span class="accent">Chapter 2</span> · 解決策 01</span>
       <span>04 / 09</span>
@@ -218,7 +218,7 @@
   <!-- ============================================================
        Slide 5 — 解決策 02：詰め込まず、枚数も増やさない
        ============================================================ -->
-  <section data-label="解決策 02 — 詰め込まず、枚数も増やさない">
+  <section data-kind="main" data-label="解決策 02 — 詰め込まず、枚数も増やさない">
     <div class="meta-line">
       <span><span class="accent">Chapter 2</span> · 解決策 02</span>
       <span>05 / 09</span>
@@ -266,7 +266,7 @@
   <!-- ============================================================
        Slide 6 — 解決策 03：Git/GitHub で継続更新
        ============================================================ -->
-  <section data-label="解決策 03 — Git/GitHub で継続更新">
+  <section data-kind="main" data-label="解決策 03 — Git/GitHub で継続更新">
     <div class="meta-line">
       <span><span class="accent">Chapter 2</span> · 解決策 03</span>
       <span>06 / 09</span>
@@ -439,22 +439,14 @@ GitHub への投稿を <strong>受講者に提案</strong> してください：
       </p>
       <hr class="rule" style="margin-bottom: 28px;">
 
-      <div class="cols-2">
-        <div>
-          <div class="col-label">Initial author</div>
-          <div class="col-body">
-            <p><strong>@watanabe-kohei-jp</strong> — 資料全体の構成・執筆</p>
-          </div>
-        </div>
+      <div class="col-label">Initial author</div>
+      <p class="credits-author"><strong>@watanabe-kohei-jp</strong> — 資料全体の構成・執筆</p>
 
-        <div>
-          <div class="col-label">Contributors</div>
-          <div class="col-body">
-            <p>PR でこの資料を直した人の名前が、ここに並んでいきます。</p>
-            <p>書き方は <code>CONTRIBUTING.md</code> を参照してください。</p>
-          </div>
-        </div>
-      </div>
+      <div class="col-label" style="margin-top: 26px;">Contributors</div>
+      <ul class="credits-list">
+        <!-- 貢献したら 1 行追加: <li><a href="https://github.com/USER">@USER</a></li> -->
+        <li class="credits-empty">最初の貢献者を待っています</li>
+      </ul>
 
       <p class="aside" style="margin-top: 28px;">
         ※ 継続的に貢献する人には Role がつき、<code>CONTRIBUTORS.md</code> に掲載されます。詳しくは <code>CONTRIBUTING.md</code>。
