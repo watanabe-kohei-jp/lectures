@@ -6,12 +6,12 @@ AI コーディングシリーズ 第 1 回。Claude Code を中心に、Git/Git
 
 ```
 01-claude-code-intro/
-├── lecture.html       ← 本体（ブラウザで開く / AI に読ませる）
+├── index.html         ← 本体（ブラウザで開く / AI に読ませる）
 ├── README.md          ← このファイル
 └── _assets/           ← 図・スクショ（必要時）
 ```
 
-`lecture.html` は隣接する `../shared/` の以下に依存：
+`index.html` は隣接する `../shared/` の以下に依存：
 
 - `shared/deck-stage.js` — スライドナビゲーション・スケーリング・印刷を担うエンジン
 - `shared/theme.css` — Anthropic 風のクリーム + テラコッタ デザインシステム
@@ -20,7 +20,7 @@ AI コーディングシリーズ 第 1 回。Claude Code を中心に、Git/Git
 
 | 読み手 | 使い方 |
 |---|---|
-| 人間（ブラウザ） | `lecture.html` を開く。`←` / `→` キー、Space、PgUp/PgDn でナビ。`Cmd/Ctrl + P` で PDF 出力 |
+| 人間（ブラウザ） | `index.html` を開く。`←` / `→` キー、Space、PgUp/PgDn でナビ。`Cmd/Ctrl + P` で PDF 出力 |
 | 人間（対面） | 発表者が前で操作。スライド本体は読み物としても成立 |
 | AI（Claude Code/Codex） | ファイルそのものを読ませると、構造化された HTML として理解される。「次のスライドを書いて」「この部分を噛み砕いて」と編集相談ができる |
 
@@ -55,7 +55,7 @@ AI コーディングシリーズ 第 1 回。Claude Code を中心に、Git/Git
 
 ### 関連
 
-- ルート `../00-about/lecture.html` — このシリーズ全体の **取説・Read.me**（持続可能な運用思想）
+- ルート `../00-about/` — このシリーズ全体の **取説・Read.me**（持続可能な運用思想）
 
 数字の出所は Anthropic 公式・Bloomberg・SaaStr・VentureBeat 等の公開報道（2026/4 時点）。後続の回が固まったら数字も更新する。
 
@@ -73,7 +73,7 @@ AI コーディングシリーズ 第 1 回。Claude Code を中心に、Git/Git
 
 ## 関連
 
-- ルート `../00-about/lecture.html` — このシリーズ全体の取説・Read me
+- ルート `../00-about/` — このシリーズ全体の取説・Read me
 
 ## Authors
 

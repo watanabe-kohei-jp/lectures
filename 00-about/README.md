@@ -6,11 +6,11 @@
 
 ```
 00-about/
-├── lecture.html       ← 本体（ブラウザで開く / AI に読ませる）
+├── index.html         ← 本体（ブラウザで開く / AI に読ませる）
 └── README.md          ← このファイル
 ```
 
-`lecture.html` は隣接する `../shared/` に依存します（`deck-stage.js` / `theme.css` / `progress-strip.js`）。
+`index.html` は隣接する `../shared/` に依存します（`deck-stage.js` / `theme.css` / `progress-strip.js`）。
 
 ## 何を説明しているか
 
@@ -23,7 +23,7 @@
 
 ## 関連
 
-- [`../01-claude-code-intro/`](../01-claude-code-intro/lecture.html) — 最初の応用例（Lecture 01）
+- [`../01-claude-code-intro/`](../01-claude-code-intro/) — 最初の応用例（Lecture 01）
 
 ## Authors
 

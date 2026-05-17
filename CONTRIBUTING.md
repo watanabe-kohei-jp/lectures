@@ -81,7 +81,7 @@
 
 修正した章について、以下の 2 か所に行を追加してください：
 
-1. **章末の Credits スライド** — `lecture.html` 最後の `<section>` にある `<ul class="credits-list">` に 1 行追加（名前だけ。多段組みで自動的に並びます）
+1. **章末の Credits スライド** — `index.html` 最後の `<section>` にある `<ul class="credits-list">` に 1 行追加（名前だけ。多段組みで自動的に並びます）
 
    ```html
    <li><a href="https://github.com/your-handle">@your-handle</a></li>
