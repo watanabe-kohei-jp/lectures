@@ -18,13 +18,16 @@ __pycache__/
 *.pyc
 .venv/
 
+# --- 完全版ビルド成果物（build.py が生成。正本は各章の index.html）---
+dist/
+
 # --- Claude Code ローカル設定 ---
 .claude/settings.local.json
 
 # --- 旧 PPTx（HTML 路線へ移行済み、新規 PPTx は受け付けない） ---
 *.pptx
 
-# --- 未使用の制作物アセット（実際に lecture.html から参照されているものだけ track する） ---
+# --- 未使用の制作物アセット（実際に index.html から参照されているものだけ track する） ---
 # 過去の制作 / 試作画像は手元には残してリポでは track しない。
 01-claude-code-intro/_assets/horse-harness.png
 01-claude-code-intro/_assets/model-service-layers.png
