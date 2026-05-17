@@ -31,6 +31,25 @@
   }
   .tagline { color: var(--ink-mute); font-size: 1.05rem; margin: 0 0 8px; }
   .lead { font-size: 1.02rem; margin: 28px 0 0; }
+  .qr-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 32px 0 0;
+    padding: 20px;
+    background: var(--clay-haze);
+    border-left: 3px solid var(--clay);
+  }
+  .qr-block img {
+    flex: none;
+    width: 116px;
+    height: 116px;
+    background: #fff;
+    padding: 8px;
+    border: 1px solid var(--border);
+  }
+  .qr-block strong { display: block; font-size: 1rem; margin-bottom: 4px; }
+  .qr-block span { font-size: 0.9rem; color: var(--ink-mute); }
   h2 {
     font-family: var(--font-serif);
     font-weight: 600;
@@ -72,6 +91,14 @@
     <strong>最新の地図</strong> になることを目指す教材です。スライドは凍結された PDF ではなく、
     Git で進化し続ける HTML。受講者と AI が一緒に読み、必要なら直接編集して PR を投げられます。
   </p>
+
+  <div class="qr-block">
+    <img src="shared/qr.svg" alt="この教材サイトの QR コード">
+    <div>
+      <strong>スマホで読む</strong>
+      <span>この QR を読み取ると、このページが手元の端末で開きます。講義中のフォローや、あとで読むのに。</span>
+    </div>
+  </div>
 
   <h2>講義</h2>
   <ul class="map">
