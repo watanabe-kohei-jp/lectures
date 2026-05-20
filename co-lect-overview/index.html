@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>co-lect — エコシステムとビジネスモデル</title>
+<meta name="description" content="co-lect エコシステムの全体像 — フライホイール・登場人物・収益経路・ブランドを 9 枚で説明する Read me（作成中）。">
+<meta name="author" content="@watanabe-kohei-jp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="co-lect — エコシステムとビジネスモデル">
+<meta property="og:description" content="学んだ人と、人を探す組織をつなぐ。その対価が、教材を無料に保つ。">
+<meta property="og:url" content="https://co-lect.github.io/lectures/co-lect-overview/">
+
+<!--
+  ============================================================
+  co-lect エコシステムとビジネスモデルの Read me
+  教材 1 つ（lectures）ではなく、co-lect 全体の説明資料。
+  反復前提のスケルトン — セクションごとに内容を詰めていく。
+  ============================================================
+-->
+
+<link rel="stylesheet" href="../shared/theme.css">
+<script src="../shared/deck-stage.js"></script>
+<script src="../shared/progress-strip.js" defer></script>
+<script src="../shared/page-number.js" defer></script>
+<script src="../shared/ai-focus.js" defer></script>
+</head>
+<body>
+
+<deck-stage width="1920" height="1080">
+
+  <!-- スライド 1 — 表紙（一文ナラティブ） -->
+  <section data-label="Cover — co-lect エコシステム">
+    <div class="cover">
+      <div class="cover-eyebrow">co-lect · エコシステムについて</div>
+      <h1 class="cover-title">
+        co-lect<br>
+        エコシステム
+      </h1>
+      <p class="cover-subtitle">
+        学んだ人と、人を探す組織をつなぐ。<br>
+        その対価が、教材を無料に保つ。
+      </p>
+    </div>
+
+    <div class="brand">
+      <span>co-lect</span>
+      <span>2026</span>
+    </div>
+  </section>
+
+  <!-- スライド 2 — つかみ：なぜこの仕組みか -->
+  <section data-label="つかみ — なぜこの仕組みか">
+    <div class="meta-line">
+      <span><span class="accent">なぜ</span> · この仕組みか</span>
+      <span>02 / 09</span>
+    </div>
+
+    <div class="content">
+      <div class="content-eyebrow">配って終わりでは追いつけない</div>
+      <h2 class="content-title">AI 時代の学びを、<em>無料</em>で・<em>最新</em>に保つには</h2>
+      <p class="content-subtitle">
+        自走する仕組みが要る
+      </p>
+      <hr class="rule">
+
+      <div class="cols-2">
+        <div>
+          <div class="col-label">課題</div>
+          <div class="col-body">
+            <p>AI 周辺は半年〜1 年で道具・ノウハウが入れ替わる。配って終わる教材ではこの速度に追いつけない。</p>
+            <p>情報は散在し、学ぶ人は <em>「どれが今も正しいのか」</em> を判断できない。</p>
+          </div>
+        </div>
+        <div>
+          <div class="col-label">必要なもの</div>
+          <div class="col-body">
+            <p>AI と人間が共同編集し続ける運用と、それを<strong>無料で支える自走する仕組み</strong>。</p>
+            <p>co-lect はその仮説を実際に動かして確かめる場です。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="brand">
+      <span>co-lect</span>
+      <span>つかみ</span>
+    </div>
+  </section>
+
+  <!-- スライド 3 — フライホイール（中核） -->
+  <section data-label="フライホイール — 自己強化ループ">
+    <div class="meta-line">
+      <span><span class="accent">フライホイール</span> · 自己強化ループ</span>
+      <span>03 / 09</span>
+    </div>
+
+    <div class="content">
+      <div class="content-eyebrow">どこから始めても回り、各段が次を強化する</div>
+      <h2 class="content-title">co-lect のフライホイール</h2>
+      <hr class="rule">
+
+      <!-- [TODO] フライホイール SVG — このスケルトンでは構造プレースホルダ。内容詰め段階で SVG を書く -->
+      <div style="margin-top: 32px; padding: 48px; border: 2px dashed var(--rule); border-radius: 8px; text-align: center; color: var(--ink-mute); font-family: var(--font-sans);">
+        <div style="font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 18px;">PLACEHOLDER — flywheel SVG</div>
+        <div style="font-family: var(--font-mono); font-size: 17px; line-height: 1.9; color: var(--ink); text-align: left; display: inline-block;">
+          (1) 教材が無料・最新 →<br>
+          (2) 学習者が増える →<br>
+          (3) 学習者の一部が貢献者になる →<br>
+          (4) 教材の質・量が上がる →<br>
+          (5) AI を使える人材のプールが厚くなる →<br>
+          (6) 組織が「求人・支援の枠」に価値を見出す →<br>
+          (7) 運営が資金的に続く →<br>
+          <span style="color: var(--clay-deep);">→ (1) 教材を無料・最新に保てる</span>
+        </div>
+      </div>
+
+      <p class="aside" style="margin-top: 24px;">
+        ※ 内容詰めの段階で、円環＋7 ノード＋矢印の SVG に置き換える。ナプキン一筆書きの単純さを死守。
+      </p>
+    </div>
+
+    <div class="brand">
+      <span>co-lect</span>
+      <span>フライホイール</span>
+    </div>
+  </section>
+
+  <!-- スライド 4 — 登場人物と価値交換 -->
+  <section data-label="登場人物 — 誰が出して、誰が得るか">
+    <div class="meta-line">
+      <span><span class="accent">登場人物</span> · 価値の流れ</span>
+      <span>04 / 09</span>
+    </div>
+
+    <div class="content">
+      <div class="content-eyebrow">多面市場の中身</div>
+      <h2 class="content-title">払う人 ≠ 主な受益者</h2>
+      <p class="content-subtitle">
+        学習者は無料のまま。組織が払う
+      </p>
+      <hr class="rule">
+
+      <div class="matrix matrix-2" style="margin-top: 20px;">
+        <div class="m-cell m-corner"></div>
+        <div class="m-cell m-head">出すもの</div>
+        <div class="m-cell m-head">得るもの</div>
+
+        <div class="m-cell m-row">学習者<br><span class="m-row-sub">読者</span></div>
+        <div class="m-cell">時間・フィードバック</div>
+        <div class="m-cell">無料・最新の教材、AI と学ぶ実践</div>
+
+        <div class="m-cell m-row">貢献者</div>
+        <div class="m-cell">修正・追記の PR</div>
+        <div class="m-cell">評判（Credits / Role）、持ち運べる証跡</div>
+
+        <div class="m-cell m-row">組織</div>
+        <div class="m-cell">運営を支える資金・支援</div>
+        <div class="m-cell">AI を使える人材との出会い、可視化</div>
+
+        <div class="m-cell m-row">AI<br><span class="m-row-sub">媒体</span></div>
+        <div class="m-cell">—</div>
+        <div class="m-cell">登場人物ではなく、共同編集を可能にする媒体</div>
+      </div>
+    </div>
+
+    <div class="brand">
+      <span>co-lect</span>
+      <span>登場人物</span>
+    </div>
+  </section>
+
+  <!-- スライド 5 — 売る／売らない -->
+  <section data-label="売る／売らない">
+    <div class="meta-line">
+      <span><span class="accent">売る／売らない</span> · 価値の境界</span>
+      <span>05 / 09</span>
+    </div>
+
+    <div class="content">
+      <div class="content-eyebrow">否定形で価値観を宣言する</div>
+      <h2 class="content-title">何を売り、何を売らないか</h2>
+      <hr class="rule">
+
+      <div class="cols-2" style="margin-top: 24px;">
+        <div>
+          <div class="col-label">売っているもの</div>
+          <div class="col-body">
+            <p><strong>リーチ＋正典としての信頼。</strong></p>
+            <p>教材が信頼される地図であるほど、そこに集う学習者と、その注目の価値が上がる。<em>AI 経由のリーチは AI クローラのログで計測できる</em>。</p>
+          </div>
+        </div>
+        <div>
+          <div class="col-label">売らないもの</div>
+          <div class="col-body">
+            <ul class="dashed">
+              <li>教材の編集判断</li>
+              <li>並び順（課金で買えない）</li>
+              <li>読者の個人データ</li>
+              <li>媒体に埋め込んだ隠れた指示</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p class="aside" style="margin-top: 28px;">
+        ※ 媒体は「指令」ではなく「コンテンツ」。AI に伝わる内容は人間にも見える — co-lect の不変条件。
+      </p>
+    </div>
+
+    <div class="brand">
+      <span>co-lect</span>
+      <span>売る／売らない</span>
+    </div>
+  </section>
+
+  <!-- スライド 6 — 収益経路 3 つ -->
+  <section data-label="収益経路 — 3 つの道筋">
+    <div class="meta-line">
+      <span><span class="accent">収益経路</span> · 3 つの道筋</span>
+      <span>06 / 09</span>
+    </div>
+
+    <div class="content">
+      <div class="content-eyebrow">読者ではなく第三者が払う、その経路</div>
+      <h2 class="content-title">3 つの道筋</h2>
+      <hr class="rule">
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 28px;">
+        <div style="border: 2px solid var(--clay-deep); padding: 24px 22px; border-radius: 6px; background: rgba(204, 120, 92, 0.05);">
+          <div style="font-size: 12px; letter-spacing: 0.18em; color: var(--clay-deep); font-weight: 700; margin-bottom: 10px; font-family: var(--font-sans);">A · 主軸</div>
+          <h3 style="font-family: var(--font-serif); font-size: 24px; margin: 0 0 12px 0; color: var(--clay-deep); font-weight: 600;">スポンサードコンテンツ</h3>
+          <p style="font-size: 16px; color: var(--ink); margin: 0 0 8px 0; line-height: 1.55;"><strong>求人・案件に限定</strong>。AI チャネルに自然に届く。</p>
+          <p style="font-size: 14px; color: var(--ink-mute); margin: 0; line-height: 1.55;">編集判断を歪めないものだけ（製品推薦は NG）</p>
+        </div>
+        <div style="border: 1px solid var(--rule); padding: 24px 22px; border-radius: 6px;">
+          <div style="font-size: 12px; letter-spacing: 0.18em; color: var(--ink-mute); font-weight: 700; margin-bottom: 10px; font-family: var(--font-sans);">B</div>
+          <h3 style="font-family: var(--font-serif); font-size: 24px; margin: 0 0 12px 0; color: var(--ink-strong); font-weight: 600;">分離型広告</h3>
+          <p style="font-size: 16px; color: var(--ink); margin: 0 0 8px 0; line-height: 1.55;">教材本体と<strong>分離した枠</strong>。</p>
+          <p style="font-size: 14px; color: var(--ink-mute); margin: 0; line-height: 1.55;">独立性は守れるが AI チャネルには届きにくい</p>
+        </div>
+        <div style="border: 1px solid var(--rule); padding: 24px 22px; border-radius: 6px;">
+          <div style="font-size: 12px; letter-spacing: 0.18em; color: var(--ink-mute); font-weight: 700; margin-bottom: 10px; font-family: var(--font-sans);">C</div>
+          <h3 style="font-family: var(--font-serif); font-size: 24px; margin: 0 0 12px 0; color: var(--ink-strong); font-weight: 600;">二次利用</h3>
+          <p style="font-size: 16px; color: var(--ink); margin: 0 0 8px 0; line-height: 1.55;">CC-BY-4.0 で<strong>誰でも自由</strong>。</p>
+          <p style="font-size: 14px; color: var(--ink-mute); margin: 0; line-height: 1.55;">収益ではなく、コミュニティを広げる経路</p>
+        </div>
+      </div>
+
+      <p class="aside" style="margin-top: 22px;">
+        ※ 枠の形・価格・着手時期は未決定。観客が出てから、貢献者と公開の場で決める。
+      </p>
+    </div>
+
+    <div class="brand">
+      <span>co-lect</span>
+      <span>収益経路</span>
+    </div>
+  </section>
+
+  <!-- スライド 7 — ブランド -->
+  <section data-label="ブランド — 公式と非公式">
+    <div class="meta-line">
+      <span><span class="accent">ブランド</span> · 中身は自由・ブランドは支配</span>
+      <span>07 / 09</span>
+    </div>
+
+    <div class="content">
+      <div class="content-eyebrow">CC-BY は商標をライセンスしない</div>
+      <h2 class="content-title">公式を「与える特権」にする</h2>
+      <p class="content-subtitle">
+        非公式を命じない — 公式バッジが付いた作品だけが公式
+      </p>
+      <hr class="rule">
+
+      <div class="matrix matrix-2" style="margin-top: 18px;">
+        <div class="m-cell m-corner"></div>
+        <div class="m-cell m-head">付与</div>
+        <div class="m-cell m-head">意味</div>
+
+        <div class="m-cell m-row">co-lect 公式</div>
+        <div class="m-cell">co-lect が審査</div>
+        <div class="m-cell">co-lect が内容を保証</div>
+
+        <div class="m-cell m-row">コミュニティ作品</div>
+        <div class="m-cell">任意申請（軽い規約）</div>
+        <div class="m-cell">仲間として可視化・軽い免責</div>
+
+        <div class="m-cell m-row">無印</div>
+        <div class="m-cell">誰でも（CC-BY のまま）</div>
+        <div class="m-cell">完全自由。名前・ロゴ不可・責任なし</div>
+      </div>
+
+      <p class="aside" style="margin-top: 22px;">
+        ※ Linux・Mozilla・WordPress・Python が実証してきた「中身は自由・ブランドは支配」型。
+      </p>
+    </div>
+
+    <div class="brand">
+      <span>co-lect</span>
+      <span>ブランド</span>
+    </div>
+  </section>
+
+  <!-- スライド 8 — 貢献者への還元 -->
+  <section data-label="貢献者への還元 — 評判・証跡・機会">
+    <div class="meta-line">
+      <span><span class="accent">貢献者への還元</span> · いまから積み上がる</span>
+      <span>08 / 09</span>
+    </div>
+
+    <div class="content">
+      <div class="content-eyebrow">教える側と教わる側の境界はゆるい</div>
+      <h2 class="content-title">3 つの還元</h2>
+      <hr class="rule">
+
+      <ul class="dashed" style="margin-top: 24px;">
+        <li>
+          <strong>評判 — 消えない、検証できる証跡。</strong>
+          PR で資料を直した人の名前は、Credits・<code>git log</code>・<code>CONTRIBUTORS.md</code> に永続的に残る。typo 修正でも残る。
+        </li>
+        <li>
+          <strong>持ち運べる証跡。</strong>
+          GitHub の履歴・Role・Credits は、他の場（就職・受託・登壇）で示せる<em>リンク 1 本の証跡</em>。貢献がそのままポートフォリオになる。
+        </li>
+        <li>
+          <strong>将来の機会への優先。</strong>
+          収益経路（求人・案件）が動き出したとき、貢献の蓄積がある人を優先的に位置づける。早く関わった人ほど証跡を長く積める。
+        </li>
+      </ul>
+    </div>
+
+    <div class="brand">
+      <span>co-lect</span>
+      <span>貢献者への還元</span>
+    </div>
+  </section>
+
+  <!-- スライド 9 — 現在地・締め -->
+  <section data-label="現在地 — まだ十分に早い">
+    <div class="meta-line">
+      <span><span class="accent">現在地</span> · まだ十分に早い</span>
+      <span>09 / 09</span>
+    </div>
+
+    <div class="content">
+      <div class="content-eyebrow">co-lect はいま</div>
+      <h2 class="content-title">フライホイールは、まだ細い</h2>
+      <p class="content-subtitle">
+        lectures 1 つ、star 1 / fork 1 — どの仕組みも、まだ作るのに十分早い段階
+      </p>
+      <hr class="rule">
+
+      <div style="margin-top: 32px;">
+        <p style="font-size: 28px; line-height: 1.7; color: var(--ink); font-family: var(--font-serif); margin: 0;">
+          第 1 段の <strong>「正典化＋GEO」</strong> のみ稼働。<br>
+          これが他のすべての前提です。
+        </p>
+        <p style="font-size: 22px; line-height: 1.7; color: var(--ink-mute); font-family: var(--font-serif); font-style: italic; margin-top: 24px;">
+          方針は変わり得ます。変わったら、判断の理由とともに Git の履歴に残します。<br>
+          この方針自体も、議論・修正できる対象です。
+        </p>
+      </div>
+    </div>
+
+    <div class="brand">
+      <span>co-lect</span>
+      <span>現在地</span>
+    </div>
+  </section>
+
+</deck-stage>
+
+</body>
+</html>
