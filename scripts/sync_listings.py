@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import datetime
+import html
 import os
 import re
 import subprocess
@@ -95,11 +96,13 @@ class Lecture:
         return t
 
 
-def _extract(pattern: re.Pattern, html: str, label: str, path: Path) -> str:
-    m = pattern.search(html)
+def _extract(pattern: re.Pattern, page: str, label: str, path: Path) -> str:
+    m = pattern.search(page)
     if not m:
         raise SystemExit(f"ERROR: missing {label} in {path}")
-    return m.group(1).strip()
+    # HTML entities in the source decode to their characters so that
+    # renderers can re-escape per output format without double-encoding.
+    return html.unescape(m.group(1).strip())
 
 
 def discover_lectures(root: Path) -> list[Lecture]:
@@ -112,28 +115,56 @@ def discover_lectures(root: Path) -> list[Lecture]:
             continue
         idx = child / "index.html"
         if not idx.exists():
-            continue
-        html = idx.read_text(encoding="utf-8")
+            raise SystemExit(
+                f"ERROR: {child.name}/ matches the lecture naming pattern "
+                f"but has no index.html"
+            )
+        page = idx.read_text(encoding="utf-8")
         lectures.append(Lecture(
             num=m.group(1),
             slug=m.group(2),
-            raw_title=_extract(TITLE_RE, html, "<title>", idx),
-            desc=_extract(META_DESC_RE, html, '<meta name="description">', idx),
-            slide_count=len(SECTION_RE.findall(html)),
+            raw_title=_extract(TITLE_RE, page, "<title>", idx),
+            desc=_extract(META_DESC_RE, page, '<meta name="description">', idx),
+            slide_count=len(SECTION_RE.findall(page)),
             lastmod=git_lastmod(f"{child.name}/index.html", root),
         ))
     return lectures
 
 
+# Pre-flight validation. Reject metadata characters that would break the
+# rendered output: newlines collapse listings, "<!-- listings:auto" would
+# corrupt our own marker scan, and pipes break markdown tables. Keep this
+# strict so we fail fast instead of producing a malformed file.
+FORBIDDEN_SUBSTRINGS = ("<!-- listings:auto", "\n", "\r", "|")
+
+
+def validate_metadata(lectures: list[Lecture]) -> None:
+    for lec in lectures:
+        for field_name, value in (("<title>", lec.raw_title),
+                                  ("<meta description>", lec.desc)):
+            for bad in FORBIDDEN_SUBSTRINGS:
+                if bad in value:
+                    label = repr(bad) if bad.strip() else "newline/CR"
+                    raise SystemExit(
+                        f"ERROR: {lec.dir_name}/index.html {field_name} "
+                        f"contains forbidden substring {label}: {value!r}"
+                    )
+
+
 # --- renderers ---------------------------------------------------------------
+
+def _h(value: str) -> str:
+    """Escape for HTML/XML text content and attribute values."""
+    return html.escape(value, quote=True)
+
 
 def render_sitemap(lectures: list[Lecture]) -> str:
     parts = []
     for lec in lectures:
         parts.append(
             "  <url>\n"
-            f"    <loc>{lec.url}</loc>\n"
-            f"    <lastmod>{lec.lastmod}</lastmod>\n"
+            f"    <loc>{_h(lec.url)}</loc>\n"
+            f"    <lastmod>{_h(lec.lastmod)}</lastmod>\n"
             "    <changefreq>monthly</changefreq>\n"
             "    <priority>0.8</priority>\n"
             "  </url>"
@@ -153,17 +184,24 @@ def render_index_html(lectures: list[Lecture]) -> str:
     for lec in lectures:
         blocks.append(
             "    <li>\n"
-            f'      <a class="title" href="{lec.dir_name}/">{lec.num} — {lec.topic}</a>\n'
-            f'      <div class="desc">{lec.desc}</div>\n'
+            f'      <a class="title" href="{_h(lec.dir_name)}/">'
+            f"{_h(lec.num)} — {_h(lec.topic)}</a>\n"
+            f'      <div class="desc">{_h(lec.desc)}</div>\n'
             "    </li>"
         )
     return "\n".join(blocks)
 
 
 def render_readme_table(lectures: list[Lecture]) -> str:
+    # `|` and newlines are blocked at validate_metadata(); escape angle
+    # brackets so values like `<X>` do not get treated as raw HTML by
+    # markdown renderers.
+    def md(v: str) -> str:
+        return v.replace("<", "&lt;").replace(">", "&gt;")
+
     return "\n".join(
         f"| [`{lec.dir_name}/`](./{lec.dir_name}/index.html) "
-        f"| {lec.topic} | {lec.slide_count} 枚 |"
+        f"| {md(lec.topic)} | {lec.slide_count} 枚 |"
         for lec in lectures
     )
 
@@ -231,6 +269,7 @@ def main() -> int:
     if not lectures:
         print("No lectures discovered.", file=sys.stderr)
         return 2
+    validate_metadata(lectures)
 
     file_text: dict[str, str] = {}
     drifted: list[tuple[str, str]] = []
