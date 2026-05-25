@@ -1,0 +1,70 @@
+{
+  "$schema": "./reading-routes.schema.json",
+  "_comment": "README の『## 何が読めるか』と『## 読み進め方（推奨ルート）』の正本。build.py がここから README の AUTOGEN 区間を再生成する。章を追加・リネーム・削除したら、まずこのファイルを直して `python build.py` を走らせる。CI が drift を検出する。",
+  "chapters": [
+    {
+      "dir": "00-about",
+      "title": "この資料の歩き方（Read me）",
+      "slides": 10
+    },
+    {
+      "dir": "01-claude-code-intro",
+      "title": "Claude Code 入門",
+      "slides": 13
+    },
+    {
+      "dir": "02-setup",
+      "title": "Claude Code 環境構築（プラン選び・インストール・初起動）",
+      "slides": 12
+    },
+    {
+      "dir": "03-claude-md",
+      "title": "`CLAUDE.md` でプロジェクトを記憶させる",
+      "slides": 12
+    }
+  ],
+  "routes_intro": "「どの順番で・どの深さで読めばいいか分からない」と感じたら、次の 3 ルートから自分に合うものを選んでください。**どのルートも 25〜45 分** で初回通読できます。",
+  "routes": [
+    {
+      "id": "beginner",
+      "label": "ルート A — はじめての方",
+      "duration_min": 30,
+      "audience": "Claude Code をまだ触ったことがない／聞いたことはあるけど使っていない",
+      "goal": "Claude Code を自分の PC で動かして、ちょっとした質問を投げられる状態。",
+      "chapters": [
+        { "dir": "00-about", "note": "**必読**。なぜこの形（HTML × Git × AI）の教材なのか、思想を {slides} 枚で。ここを飛ばすと以降が宙に浮きます" },
+        { "dir": "01-claude-code-intro", "note": "Claude Code とは何か、何ができるか" },
+        { "dir": "02-setup", "note": "手元にインストールして触ってみる" }
+      ]
+    },
+    {
+      "id": "claude-user",
+      "label": "ルート B — Claude Code は触っている方",
+      "duration_min": 25,
+      "audience": "日常的に使っているが、もっと深く使いこなしたい／チームに紹介したい",
+      "goal": "自分のリポジトリの `CLAUDE.md` を 1 つ書き直して、AI の挙動を狙い通りに変えられる。",
+      "chapters": [
+        { "dir": "00-about", "note": "このリポジトリ自体の運用思想（5 分で目を通す）" },
+        { "dir": "03-claude-md", "note": "`CLAUDE.md` の書き方・育て方（実は最も効果がある投資）" }
+      ],
+      "extras": [
+        { "label": "ルートの `CLAUDE.md`", "href": "./CLAUDE.md", "note": "本リポジトリで採用している運用ルールの実例" }
+      ]
+    },
+    {
+      "id": "builder",
+      "label": "ルート C — 教材として／作り手として読む方",
+      "duration_min": 45,
+      "audience": "教育担当・社内教材を作る人・カンファレンス登壇者など、\"作り方\" 自体に興味がある",
+      "goal": "自前で同じ形式の教材を立ち上げる土台ができる。",
+      "chapters": [
+        { "dir": "00-about", "note": "設計思想（必読）" }
+      ],
+      "extras": [
+        { "label": "`CONTRIBUTING.md`", "href": "./CONTRIBUTING.md", "note": "Issue / Discussion / PR の使い分け" },
+        { "label": "`CLAUDE.md`", "href": "./CLAUDE.md", "note": "このリポジトリの運用方針全体" },
+        { "label": "任意の章を 1 つ選んで [`shared/`](./shared/) の HTML スライドエンジンを覗く", "href": null, "note": null }
+      ]
+    }
+  ]
+}
